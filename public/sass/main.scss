@@ -1,16 +1,4 @@
-// BOOTSTRAP
-$font: 'Open Sans', sans-serif;
-$font-weights:
-(
-    light: 300,
-    normal: 400,
-    bold: 800
-);
-
-@mixin font-weight($size)
-{
-    font-weight: map-get($font-weights, $size);
-}
+@import "lib/bootstrap";
 
 
 body
