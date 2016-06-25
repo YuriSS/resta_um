@@ -6,7 +6,7 @@ var FILE_ENCODING   = 'utf-8',
 
 
 var dir         = _path.join(__dirname, "../../public/js"),
-    destino     = _path.join(__dirname, "../../app/statics/main.js"),
+    destino     = _path.join(__dirname, "../../app/statics/scripts.js"),
 
     arquivos = [
         _path.join(dir, "lib/bootstrap.js"),
@@ -20,4 +20,4 @@ var dir         = _path.join(__dirname, "../../public/js"),
     );
 
 _fs.writeFileSync(destino, saida.join(EOL), FILE_ENCODING);
-console.log('O arquivo js foi construido em /app/statics/main.js');
+console.log('O arquivo js foi construido em /app/statics/scripts.js');
