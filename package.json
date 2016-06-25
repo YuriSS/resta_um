@@ -5,11 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "./bin/build",
     "build-css": "./bin/build_css",
     "build-js": "./bin/concat_js",
+    "watch": "./bin/watch",
     "watch-css": "./bin/watch_css",
-    "watch-js": "./bin/watch_js",
-    "watch": "./bin/watch"
+    "watch-js": "./bin/watch_js"
   },
   "author": "",
   "license": "ISC",

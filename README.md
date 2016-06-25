@@ -1,14 +1,16 @@
 #Jogo Resta um
 
-#Tarefas automatizadas
+#Setup app
 
-Requer:
-NodeJS v6.2.2
-npm v3.9.5
+Requer: NodeJS v6.2.2 e npm v3.9.5
 
-Antes de executar qualquer tarefa, é necessario instalar as dependencias executando o comando "npm install",
+Instalando as dependencias "npm install",
 
 Talvez se faça necessário fazer os arquivos dentro da pasta bin se tornarem executaveis através do comando "chmod +x bin/*"
+
+Para configurar os arquivos estaticos execute "npm run build"
+
+#Tarefas automatizadas
 
 - Processar css
 Para executar a tarefa de processar os arquivos scss em css execute o comando "npm run build-css"
