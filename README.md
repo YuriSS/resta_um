@@ -6,7 +6,9 @@ Requer:
 NodeJS v6.2.2
 npm v3.9.5
 
-Antes de executar qualquer tarefa, é necessario instalar as dependencias executando o comando "npm install"
+Antes de executar qualquer tarefa, é necessario instalar as dependencias executando o comando "npm install",
+
+Talvez se faça necessário fazer os arquivos dentro da pasta bin se tornarem executaveis através do comando "chmod +x bin/*"
 
 - Processar css
 Para executar a tarefa de processar os arquivos scss em css execute o comando "npm run build-css"
