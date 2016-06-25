@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-css": "node-sass --include-path scss public/sass/main.scss   app/statics/main.css"
+    "build-css": "./bin/build_css",
+    "watch-css": "./bin/watch_css"
   },
   "author": "",
   "license": "ISC",
