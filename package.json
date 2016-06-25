@@ -8,7 +8,8 @@
     "build-css": "./bin/build_css",
     "build-js": "./bin/concat_js",
     "watch-css": "./bin/watch_css",
-    "watch-js": "./bin/watch_js"
+    "watch-js": "./bin/watch_js",
+    "watch": "./bin/watch"
   },
   "author": "",
   "license": "ISC",
