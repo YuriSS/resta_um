@@ -1,7 +1,20 @@
-$teste: #333;
+// BOOTSTRAP
+$font: 'Open Sans', sans-serif;
+$font-weights:
+(
+    light: 300,
+    normal: 400,
+    bold: 800
+);
+
+@mixin font-weight($size)
+{
+    font-weight: map-get($font-weights, $size);
+}
+
 
 body
 {
-    color: #FFF;
-    background-color: $teste;
+    @include font-weight(normal);
+    font-family: $font;
 }
