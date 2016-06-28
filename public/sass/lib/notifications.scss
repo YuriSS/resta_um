@@ -1,0 +1,18 @@
+%notification
+{
+    width: 100%;
+    display: block;
+    padding: .5em;
+    text-align: center;
+    border-radius: .2em;
+}
+
+@each $key, $value in $notifications_colors
+{
+    .notification_#{$key}
+    {
+        @extend %notification;
+        background-color: map-get($notifications_colors, $key);
+        color: set-text-color(map-get($notifications_colors, $key));
+    }
+}

@@ -1,5 +1,6 @@
 @import "reset";
 
+// [INI] FONTS
 $font: 'Open Sans', sans-serif;
 $font-weights:
 (
@@ -12,3 +13,29 @@ $font-weights:
 {
     font-weight: map-get($font-weights, $size);
 }
+// [FIM] FONTS
+
+
+
+// [INI] CORES
+$primary: #0b999c;
+$blank: #f2f6d1;
+
+$notifications_colors: (
+    info: #fa5221,
+    warning: #f2c402,
+    dangerous: #8f0024
+);
+
+
+@function set-text-color($color)
+{
+    @if (lightness($color) > 60)
+    {
+        @return $primary; // Lighter backgorund, return dark color
+    } @else
+    {
+        @return $blank; // Darker background, return light color
+    }
+}
+// [FIM] CORES

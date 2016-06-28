@@ -1,8 +1,13 @@
 @import "lib/bootstrap";
 
 
+// Elementos
+@import "lib/notifications";
+
+
 body
 {
     @include font-weight(normal);
     font-family: $font;
+    background-color: $blank;
 }

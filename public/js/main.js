@@ -1,7 +1,12 @@
-(function()
+(function(w)
     {
         'use strict'
 
-        console.log('main js');
+        var tabuleiro = new w.ru["Tabuleiro"]();
+
+        tabuleiro.mostraPecas(function(peca)
+            {
+                console.log(peca.pos);
+            });
     }
-)();
+)(window);

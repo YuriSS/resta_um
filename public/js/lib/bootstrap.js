@@ -1,7 +1,7 @@
-(function()
+(function(w)
     {
         'use strict'
 
-        console.log('bootstrap js');
+        w.ru = w.ru || {}; // Define um objeto global
     }
-)();
+)(window);
