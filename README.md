@@ -1,6 +1,8 @@
 #Jogo Resta um
 
-#Setup app
+Para executar o jogo, abra o arquivo app/index.html.
+
+#Setup dev workspace
 
 Requer: NodeJS v6.2.2 e npm v3.9.5.
 
