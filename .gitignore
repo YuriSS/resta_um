@@ -121,8 +121,3 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
-
-
-
-# IGNORES DA APLICAÇÃO
-app/statics

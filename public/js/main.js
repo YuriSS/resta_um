@@ -2,11 +2,6 @@
     {
         'use strict'
 
-        var tabuleiro = new w.ru["Tabuleiro"]();
-
-        tabuleiro.mostraPecas(function(peca)
-            {
-                console.log(peca.pos);
-            });
+        var game = w.ru["Game"].init().startRound();
     }
 )(window);

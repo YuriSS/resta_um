@@ -1,0 +1,43 @@
+$sql_tam: (
+    w: map-get($dimencao, x),
+    h: map-get($dimencao, y)
+);
+
+%sql
+{
+    width: map-get($sql_tam, w);
+    height: map-get($sql_tam, h);
+    display: inline-block;
+    padding: 0;
+    text-indent: -9999999px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+@each $key, $value in $sql_colors
+{
+    .sql--#{$key}
+    {
+        @extend %sql;
+        background-color: map-get($sql_colors, $key);
+    }
+}
+
+.sql--fim_linha
+{
+    display: block;
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.sql--blank
+{
+    cursor: default;
+}
+
+.sql--pin[data-ativo="ativo"]
+{
+    border: solid 1px $blank;
+}

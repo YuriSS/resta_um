@@ -2,54 +2,87 @@
     {
         'use strict'
 
-        var tabuleiroLayout = [
-            "   ...   ",
-            "   ...   ",
-            ".........",
-            ".........",
-            ".........",
-            "   ...   ",
-            "   ...   "
-        ];
-
-        w.ru["Tabuleiro"] = function()
+        w.ru["Tabuleiro"] = function(layout)
         {
-            this.criaTabuleiro();
+            this.layout = layout;
         };
 
-        w.ru["Tabuleiro"].prototype.criaTabuleiro = function()
+        w.ru["Tabuleiro"].prototype.initTabuleiro = function()
         {
+            this.numPecas = 0;
             this.pecas = {};
 
-            for(var y = 0, ly = tabuleiroLayout.length; y < ly; y++)
-            {
-                for(var x = 0, lx = tabuleiroLayout[y].length - 1; x < lx; x++)
+            this.layout.each(function(sql, x, y)
                 {
-                    var sql = tabuleiroLayout[y][x];
-
-                    if(sql === ".")
+                    if(sql === this.layout.sql)
                     {
-                        var key = x + "" + y;
-                        var pos = new w.ru["Vetor"](x, y);
+                        var vetor = new w.ru["Vetor"](x, y);
 
-                        this.pecas[key] = new w.ru["Peca"](pos);
+                        this.pecas[key(vetor)] = vetor;
+                        this.numPecas++;
                     }
-                }
-            }
+                }.bind(this)
+            );
         };
 
-        w.ru["Tabuleiro"].prototype.mostraPecas = function(callback)
+        w.ru["Tabuleiro"].prototype.mostrarPecas = function(callback)
         {
             for(var key in this.pecas)
             {
-                console.log(key);
                 callback(this.pecas[key]);
             }
         };
 
-        // w.ru["Tabuleiro"].prototype.removePeca = function()
-        // {
-        //     --this.numPecas;
-        // };
+        w.ru["Tabuleiro"].prototype.getPeca = function(vetor)
+        {
+            return this.pecas[key(vetor)];
+        };
+
+        w.ru["Tabuleiro"].prototype.moverPeca = function(posPeca, posMove)
+        {
+            if(instanceVetor(posPeca) && instanceVetor(posMove))
+            {
+                if(this.pecas[key(posPeca)] !== undefined && this.pecas[key(posMove)] === undefined)
+                {
+                    this.pecas[key(posMove)] = posMove;
+
+                    this.removerPeca(this.pecas[key(posPeca)]);
+
+                    return true;
+                }
+                console.error("Peca n existente ou existe peca no caminho.");
+            }
+            return false;
+        };
+
+        w.ru["Tabuleiro"].prototype.removerPeca = function(peca)
+        {
+            if(this.pecas[key(peca)])
+            {
+                delete this.pecas[key(peca)];
+
+                return true;
+            }
+
+            return false;
+        };
+
+
+
+        function key(vetor)
+        {
+            if(instanceVetor(vetor))
+            {
+                return vetor.x + "" + vetor.y;
+            }
+
+            return null;
+        }
+
+        function instanceVetor(vetor)
+        {
+            return vetor && vetor instanceof w.ru["Vetor"];
+        }
     }
+
 )(window);

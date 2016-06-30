@@ -10,9 +10,12 @@ var dir         = _path.join(__dirname, "../../public/js"),
 
     arquivos = [
         _path.join(dir, "lib/bootstrap.js"),
-        _path.join(dir, "lib/tabuleiro.js"),
         _path.join(dir, "lib/vetor.js"),
-        _path.join(dir, "lib/peca.js"),
+        _path.join(dir, "lib/layout.js"),
+        _path.join(dir, "lib/regras.js"),
+        _path.join(dir, "lib/tabuleiro.js"),
+        _path.join(dir, "lib/palco.js"),
+        _path.join(dir, "lib/game.js"),
         _path.join(dir, "main.js")
     ],
 

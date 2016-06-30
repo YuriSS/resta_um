@@ -18,13 +18,20 @@ $font-weights:
 
 
 // [INI] CORES
-$primary: #0b999c;
-$blank: #f2f6d1;
+$primary: #18AAD6;
+$blank: #E8FFF4;
+$bg: #2E565A;
 
 $notifications_colors: (
-    info: #fa5221,
+    info: #3DA8B3,
     warning: #f2c402,
     dangerous: #8f0024
+);
+
+$sql_colors: (
+    blank: $bg,
+    pin: $primary,
+    pin_blank: $blank
 );
 
 
@@ -35,7 +42,32 @@ $notifications_colors: (
         @return $primary; // Lighter backgorund, return dark color
     } @else
     {
-        @return $blank; // Darker background, return light color
+        @return #FFF; // Darker background, return light color
     }
 }
 // [FIM] CORES
+
+
+
+// [INI] CONFIGS GAME
+$numPecas: (
+    x: 9,
+    y: 7
+);
+$dimencao: (
+    x: 100% / map-get($numPecas, x),
+    y: 40px
+);
+// [FIM] CONFIGS GAME
+
+
+
+
+
+h1
+{
+    font-size: 3em;
+    text-align: center;
+    font-weight: 900;
+    color: $blank;
+}

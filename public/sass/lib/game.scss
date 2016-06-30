@@ -1,0 +1,29 @@
+.container
+{
+    width: 90%;
+    margin: 20px auto;
+    max-width: 325px;
+}
+
+.game
+{
+    margin: 20px 0;
+    min-height: 330px;
+}
+
+.instrucoes
+{
+    margin-top: 20px;
+    font-size: .8em;
+
+    p
+    {
+        margin-bottom: 5px;
+        text-align: justify;
+    }
+
+    p:last-child
+    {
+        margin-bottom: 0;
+    }
+}

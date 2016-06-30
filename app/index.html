@@ -7,8 +7,18 @@
     <link rel="stylesheet" href="statics/styles.css">
 </head>
 <body>
-    <h1>Teste</h1>
-    <p class="notification_dangerous">Impossível realizar esse movimento</p>
+    <div class="container">
+        <h1>Resta Um</h1>
+        <div class="game" id="game"></div>
+        <div class="nav-info">
+            <button type="button" id="startGame" class="start-game notification--info">Começar novo jogo</button>
+            <div class="placar" id="placar"></div>
+        </div>
+        <div class="instrucoes">
+            <p><strong>Instruções:</strong> Selecione uma peça para jogar clicando em cima de uma das peças azuis, após peça selecionada, clique em um espaço em branco.</p>
+            <p>Somente é permitido movimentos na horizontal e diagonal e sempre passando por cima de uma outra peça.</p>
+        </div>
+    </div>
     <script src="statics/scripts.js"></script>
 </body>
 </html>

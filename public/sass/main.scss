@@ -3,11 +3,14 @@
 
 // Elementos
 @import "lib/notifications";
+@import "lib/sql.scss";
+@import "lib/game.scss";
 
 
 body
 {
     @include font-weight(normal);
     font-family: $font;
-    background-color: $blank;
+    background-color: $bg;
+    color: $blank;
 }

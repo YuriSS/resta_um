@@ -1,18 +1,33 @@
 %notification
 {
-    width: 100%;
     display: block;
     padding: .5em;
     text-align: center;
     border-radius: .2em;
+    border: none;
+    cursor: pointer;
 }
 
 @each $key, $value in $notifications_colors
 {
-    .notification_#{$key}
+    .notification--#{$key}
     {
         @extend %notification;
         background-color: map-get($notifications_colors, $key);
         color: set-text-color(map-get($notifications_colors, $key));
+    }
+}
+
+
+.nav-info
+{
+    display: block;
+    width: 100%;
+
+    .start-game, .placar
+    {
+        display: inline-block;
+        width: 45%;
+        font-size: .8em;
     }
 }
